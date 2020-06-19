@@ -6,11 +6,11 @@ import asnycio
 from urllib import parse, request
 import re
 
-bot = commands.Bot(command_prefix='wox', description="This is DooM Bot")
+client = Bot(command_prefix='wox', description="This is DooM Bot")
 
-@bot.command()
+@client.command()
 async def ping(ctx):
     await ctx.send('pong')
 
 
-bot.run(os.getenv('Token'))
+client.run(os.getenv('Token'))
