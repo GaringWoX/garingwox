@@ -11,10 +11,4 @@ import time
 from discord.voice_client import VoiceClient
 from discord import Game, Embed, Color, Status, ChannelType
 
-client = commands.Bot(command_prefix='wox')
-
-@bot.command()
-async def ping(ctx):
-    await ctx.send('pong')
-
 client.run(os.getenv('Token'))
