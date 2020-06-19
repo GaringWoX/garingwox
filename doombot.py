@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 import datetime
+import asnycio
 
 from urllib import parse, request
 import re
