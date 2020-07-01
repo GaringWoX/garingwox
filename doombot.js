@@ -4,15 +4,9 @@ const client = new Discord.Client();
 
  
 
-client.on('ready', () => {
-    client.user.setPresence({
-        game: { 
-            name: 'Take The Pill & Chill',
-            type: 'WATCHING'
-        },
-        status: 'online'
-    })
-});
+client.on("ready", () => {
+    client.user.setActivity("Take The Pill & Chill", { type: "WATCHING"})
+})
 
 
 client.on('message', message => {
