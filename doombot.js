@@ -10,9 +10,7 @@ client.on('ready', () => {
 
 });
 
-
-client.user.setPresence({ game: { name: 'Take The Pill & Chill', type: "streaming", url: ""}});
- 
+client.user.setActivity(“Take The Pill & Chill”, { type: “STREAMING” });
 
 client.on('message', message => {
 
