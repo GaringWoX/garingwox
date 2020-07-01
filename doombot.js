@@ -3,9 +3,14 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
  
-
 client.on('ready', () => {
-    client.setActivity('Take The Pill & Chill', { type: 'WATCHING'})
+    client.user.setPresence({
+        game: { 
+            name: 'Take The Pill & Chill',
+            type: 'WATCHING'
+        },
+        status: 'idle'
+    })
 });
 
 
