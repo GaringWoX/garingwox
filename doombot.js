@@ -10,6 +10,8 @@ client.on('ready', () => {
 
 });
 
+
+client.user.setPresence({ game: { name: 'Take The Pill & Chill', type: "streaming", url: ""}});
  
 
 client.on('message', message => {
