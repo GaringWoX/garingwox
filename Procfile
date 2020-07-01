@@ -1,1 +1,1 @@
-worker: python doombot.py
+worker: node doombot.js
