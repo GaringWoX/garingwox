@@ -10,7 +10,6 @@ client.on('ready', () => {
 
 });
 
-client.user.setActivity(“Take The Pill & Chill”, { type: “STREAMING” });
 
 client.on('message', message => {
 
