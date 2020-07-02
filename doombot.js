@@ -4,7 +4,7 @@ const client = new Discord.Client();
 
  
 client.on('ready', () => {
-    client.user.setPresence({
+    client.user.setActivity({
         game: { 
             name: 'Take The Pill & Chill',
             type: 'PLAYING'
