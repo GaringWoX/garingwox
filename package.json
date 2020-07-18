@@ -1,19 +1,15 @@
 {
-  "name": "welcomebot",
+  "name": "doombot",
   "version": "1.0.0",
-  "description": "A Welcome bot",
+  "description": "Just a bot",
   "main": "doombot.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node doombot.js"
   },
   "author": "DooM™#6932",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^11.3.2",
-    "fs": "0.0.1-security",
-    "jimp": "^0.6.0",
-    "ms": "^2.1.1",
-    "quick.db": "^7.0.0-b22",
+    "discord.js": "^12.2.0",
     "canvas": "^2.6.0"
   }
 }
