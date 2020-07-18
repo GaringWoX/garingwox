@@ -3,8 +3,6 @@ const config = require("./config.json")
 const bot = new Discord.Client();
 const fs = require("fs");
 bot.commands = new Discord.Collection();
-const db = require("quick.db")
-var jimp = require('jimp');
 
 fs.readdir("./commands/", (err, files) => {
 
