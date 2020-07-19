@@ -4,7 +4,8 @@
   "description": "Just a bot",
   "main": "doombot.js",
   "scripts": {
-    "start": "node doombot.js"
+    "start": "node ./doombot.js"
+    "test": "echo && exit 1"
   },
   "author": "DooM™#6932",
   "license": "ISC",
