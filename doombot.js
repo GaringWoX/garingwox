@@ -1,24 +1,25 @@
-const Discord = require("discord.js")
-const config = require("./config.json")
-const bot = new Discord.Client();
+const Discord = require('discord.js');
+const Canvas = require('canvas');
 
-bot.commands = new Discord.Collection();
+const client = new Discord.Client();
 
-
-bot.on("ready", () => {
-  console.log(bot.user.username + " is online.")
+client.once('ready', () => {
+	console.log('Ready!');
 });
 
-bot.on("message", async message => {
-  //a little bit of data parsing/general checks
- 
-  if(message.author.bot) return;
-  if(message.channel.type === 'dm') return;
-  let content = message.content.split(" ");
-  let command = content[0];
-  let args = content.slice(1);
-  let prefix = config.prefix;
-  if(!message.content.startsWith(prefix)) return;
+client.on('guildMemberAdd', member => {
+	const channel = member.guild.channels.cache.find(ch => ch.name === 'member-log');
+	if (!channel) return;
+
+	channel.send(`Welcome to the server, ${member}!`);
+});
+
+
+client.on('message', message => {
+	if (message.content === '!join') {
+		client.emit('guildMemberAdd', message.member);
+	}
+});
 
 
 bot.login(process.env.BOT_TOKEN);
